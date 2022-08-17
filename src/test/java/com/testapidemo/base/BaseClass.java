@@ -56,53 +56,5 @@ public class BaseClass {
         ExtentManager.endReport();
     }
 
-/*
-    protected Response postAudio(String audioURL) {
 
-        RestAssured.basePath = "/v2/transcript";
-        transcript.setAudio_url(audioURL);
-        String requestBody = gson.toJson(transcript);
-        RequestSpecification postRequest = RestAssured.given()
-                .header(authorHeader)
-                .header(contentTypeHeader)
-                .body(requestBody);
-        Response postResponse = postRequest.post();
-        transcript = gson.fromJson(postResponse.body().asString(), Transcript.class);
-        return postResponse;
-
-    }
-
-    protected Response getTranscript(String id) {
-        RestAssured.basePath = "/v2/transcript/" + id;
-        RequestSpecification getRequest = RestAssured.given()
-                .header(authorHeader);
-        Response getResponse = getRequest.get();
-        transcript = gson.fromJson(getResponse.body().asString(), Transcript.class);
-
-        return getResponse;
-
-    }
-
-    protected Response getTranscriptsList(String status, int limit) {
-        RestAssured.basePath = "/v2/transcript";
-        RequestSpecification getRequest = RestAssured.given()
-                .header(authorHeader)
-                .header(contentTypeHeader)
-                .param("status", status)
-                .param("limit", limit);
-
-        Response getResponse = getRequest.get();
-        transcriptsList = gson.fromJson(getResponse.body().asString(), TranscriptsList.class);
-        return getResponse;
-    }
-
-    protected Response deleteTranscript(String id) {
-        RestAssured.basePath = "/v2/transcript/" + id;
-        RequestSpecification getRequest = RestAssured.given()
-                .header(authorHeader);
-        Response deleteResponse = getRequest.delete();
-        transcript = gson.fromJson(deleteResponse.body().asString(), Transcript.class);
-        return deleteResponse;
-
-    }*/
 }

@@ -1,2 +1,5 @@
 # Project exclude paths
 /target/
+/logs/logs.log
+/config.properties
+/.idea/
